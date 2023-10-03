@@ -1,10 +1,7 @@
-var state = 1;
-var counter = 10;
+let state = 1
+let counter = 10
 setInterval(increaseTime, 1000)
 function displayResult() {
-    if (state > 3) {
-        state = 1
-    }
     if (state == 1) {
         document.getElementById("myButton").innerHTML = "Green " + counter
         document.getElementById("myButton").className = "btn btn-success"
@@ -20,6 +17,9 @@ function increaseTime() {
     --counter
     if (counter == 0) {
         ++state
+        if (state > 3) {
+            state = 1
+        }
         counter = 10
     }
     displayResult()
@@ -27,5 +27,8 @@ function increaseTime() {
 function changeState() {
     ++state
     counter = 10
+    if (state > 3) {
+        state = 1
+    }
     displayResult()
 }
