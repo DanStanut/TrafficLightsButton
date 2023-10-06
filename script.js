@@ -1,37 +1,23 @@
 let state = 1
-let counter = 10
-setInterval(decreaseTime, 1000)
+setInterval(changeState, 10000)
 
-function buttonDisplay(color, cnt, btnType) {
-    document.getElementById("myButton").innerHTML = color + cnt
+function buttonDisplay(color, btnType) {
+    document.getElementById("myButton").innerHTML = color
     document.getElementById("myButton").className = btnType
 }
 
 function displayResult() {
     if (state == 1) {
-        buttonDisplay("Green ", counter, "btn btn-success")
+        buttonDisplay("Green ", "btn btn-success")
     } else if (state == 2) {
-        buttonDisplay("Yellow ", counter, "btn btn-warning")
+        buttonDisplay("Yellow ", "btn btn-warning")
     } else {
-        buttonDisplay("Red ", counter, "btn btn-danger")
+        buttonDisplay("Red ", "btn btn-danger")
     }
-}
-
-function decreaseTime() {
-    --counter
-    if (counter == 0) {
-        ++state
-        if (state > 3) {
-            state = 1
-        }
-        counter = 10
-    }
-    displayResult()
 }
 
 function changeState() {
     ++state
-    counter = 10
     if (state > 3) {
         state = 1
     }
