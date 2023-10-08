@@ -10,12 +10,12 @@ function displayResult() {
     switch (state) {
         case 1 : 
             buttonDisplay("Green ", "btn btn-success");
-            break;
+			break;
         case 2 : 
             buttonDisplay("Yellow ", "btn btn-warning");
-            break;
+			break;
         default:
-            buttonDisplay("Red ", "btn btn-danger")
+            buttonDisplay("Red ", "btn btn-danger");
     }
 }
 
