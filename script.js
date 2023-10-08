@@ -7,12 +7,15 @@ function buttonDisplay(color, btnType) {
 }
 
 function displayResult() {
-    if (state == 1) {
-        buttonDisplay("Green ", "btn btn-success")
-    } else if (state == 2) {
-        buttonDisplay("Yellow ", "btn btn-warning")
-    } else {
-        buttonDisplay("Red ", "btn btn-danger")
+    switch (state) {
+        case 1 : 
+            buttonDisplay("Green ", "btn btn-success");
+            break;
+        case 2 : 
+            buttonDisplay("Yellow ", "btn btn-warning");
+            break;
+        default:
+            buttonDisplay("Red ", "btn btn-danger")
     }
 }
 
