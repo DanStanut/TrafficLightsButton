@@ -3,12 +3,8 @@ let state = 0
 
 setInterval(changeState, 10000)
 
-function buttonDisplay(btnType) {
-    document.getElementById("myButton").className = btnType
-}
-
 function displayResult() {
-    buttonDisplay(buttonStates[state]);
+    document.getElementById("myButton").className = buttonStates[state]
 }
 
 function changeState() {
