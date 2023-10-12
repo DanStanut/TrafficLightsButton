@@ -9,8 +9,6 @@ function displayResult() {
 
 function changeState() {
     ++state
-    if (state > 2) {
-        state = 0
-    }
+    state %= 3;
     displayResult()
 }
