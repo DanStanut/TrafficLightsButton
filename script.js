@@ -1,14 +1,14 @@
 const buttonStates = ["btn btn-success", "btn btn-warning", "btn btn-danger"]
-let state = 0
+let state = 0;
 
-setInterval(changeState, 10000)
+setInterval(changeState, 10000);
 
 function displayResult() {
-    document.getElementById("myButton").className = buttonStates[state]
+    document.getElementById("myButton").className = buttonStates[state];
 }
 
 function changeState() {
-    ++state
+    ++state;
     state %= 3;
-    displayResult()
+    displayResult();
 }
